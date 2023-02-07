@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/all_bg"
+    >
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/native_ad_container"
+        android:padding="@dimen/activity_horizontal_margin"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textDes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="@string/period_lenght_des"
+                android:textColor="@color/colorBlack" />
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/number_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textDes"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="18dp"
+                android:padding="1dp"
+                app:np_dividerColor="@color/colorBlack"
+                app:np_height="180dp"
+                app:np_max="15"
+                app:np_min="1"
+                app:np_textColor="@color/colorBlack"
+                app:np_textSize="@dimen/text_size"
+                app:np_value="4"
+                app:np_width="64dp" />
+
+            <RelativeLayout
+                android:id="@+id/RelLayHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/number_picker">
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorBlack" />
+
+                <TextView
+                    android:id="@+id/txtOptionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider1"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:text="@string/cycle_use_average"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtOptionDes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtOptionTitle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="5dp"
+                    android:alpha="1"
+                    android:paddingBottom="2dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/txtOptionDes"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorBlack" />
+
+                <ImageView
+                    android:id="@+id/imageInfo"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignTop="@+id/txtOptionTitle"
+                    android:layout_toRightOf="@+id/txtOptionTitle"
+                    android:src="@mipmap/ic_info_white_48dp"
+                    android:tint="@color/colorGrey" />
+
+                <Switch
+                    android:id="@+id/CycleSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/divider2"
+                    android:layout_below="@+id/divider1"
+                    android:layout_alignParentRight="true"
+                    android:theme="@style/SCBSwitch" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageQMark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RelLayHeight"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/ic_durata_mestruazioni"
+                android:tint="@color/black" />
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/native_ad_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

@@ -1,0 +1,3 @@
+//include ':IRBottomNavigationLib'
+include ':app'
+rootProject.name = "Periood tracker"

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackNote"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageDate"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/imgdate" />
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="dd-MM-YYYY"
+        android:textColor="@color/colorWhite"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageQMark"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:background="@mipmap/ic_question_tiffany" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageDate"
+        android:layout_alignParentLeft="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:id="@+id/RelLayHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp">
+
+                <View
+                    android:id="@+id/dividerW"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorGrey" />
+
+                <ImageView
+                    android:id="@+id/imageViewW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@mipmap/ic_pill_img_8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageViewW"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/pills_title"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/imgBookmark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/dividerW2"
+                    android:layout_below="@+id/dividerW"
+                    android:layout_margin="5dp"
+                    android:layout_toLeftOf="@+id/switchMedicines"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/img_bookmark_cute" />
+
+                <Switch
+                    android:id="@+id/switchMedicines"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/dividerW2"
+                    android:layout_below="@+id/dividerW"
+                    android:layout_alignParentRight="true"
+                    android:theme="@style/NoteSwitch" />
+
+                <View
+                    android:id="@+id/dividerW2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/imageViewW"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorGrey" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RelLayHeight"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorBackNote" />
+
+                <ImageView
+                    android:id="@+id/imageViewM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txtOptionTitleWe"
+                    android:layout_alignParentLeft="true"
+                    android:background="@mipmap/ic_weight" />
+
+                <TextView
+                    android:id="@+id/txtOptionTitleWe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageViewM"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/colorBlack"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/other_weight_title"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/editTxtWeight"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/txtOptionTitleWe"
+                    android:textColor="@color/colorBlack"
+                    android:layout_alignParentRight="true"
+                    android:ems="10"
+                    android:text="0.0"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/imageViewM"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorGrey" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relTemp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/RelLayHeight"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp">
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorBackNote" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/txtOptionTitle"
+                    android:layout_alignParentLeft="true"
+                    android:background="@mipmap/ic_temp" />
+
+                <TextView
+                    android:id="@+id/txtOptionTitleTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageView2"
+                    android:textColor="@color/colorBlack"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/other_temperature_title"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/editTxtTemp"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/txtOptionTitleTemp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/colorBlack"
+                    android:ems="10"
+                    android:text="0.0"
+                    android:textSize="20sp" />
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/imageView2"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorGrey" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewNativeFrag5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible"
+        app:adSize="SMART_BANNER"
+        app:adUnitId="@string/banner_ad_unit_id" />
+</RelativeLayout>

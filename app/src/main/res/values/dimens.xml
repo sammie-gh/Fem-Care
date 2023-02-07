@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="WheelIndicatorSize">2dp</dimen>
+    <dimen name="WheelItemSpace">12dp</dimen>
+    <dimen name="WheelItemTextSize">24sp</dimen>
+    <dimen name="WheelMargins">8dp</dimen>
+    <dimen name="activity_horizontal_margin_calendar">0dp</dimen>
+    <dimen name="activity_vertical_calendar">0dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="control_size">56dp</dimen>
+    <dimen name="min_bar_width">0.8dp</dimen>
+    <dimen name="min_height">32dp</dimen>
+    <dimen name="text_size">30dp</dimen>
+    <dimen name="wheelSelectorHeight">40dp</dimen>
+    <dimen name="wheel_spacing">30dp</dimen>
+    <dimen name="_10sdp">10dp</dimen>
+</resources>

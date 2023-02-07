@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin"
+    >
+
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+
+
+                <ImageView
+                    android:id="@+id/imageView20"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorToday" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageView20"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/day_today"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorGrey" />
+
+                <ImageView
+                    android:id="@+id/imageView20v"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorDisplay" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageView20v"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/day_selected"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelLayHeight"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorGrey" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorRossoMestruoC" />
+
+                <TextView
+                    android:id="@+id/txtOptionTitleTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageView2"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/cal_period"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/RelLayHeight"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorGrey" />
+
+                <ImageView
+                    android:id="@+id/imageViewM"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/colorFutureMestruoC" />
+
+                <TextView
+                    android:id="@+id/txtOptionTitleWe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/imageViewM"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/cal_fut_period"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelLayUseDivider2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/RelLayHeight"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <View
+                    android:id="@+id/dividerW"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorGrey" />
+
+                <ImageView
+                    android:id="@+id/imageViewW"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@mipmap/ic_sex" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageViewW"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/cal_intimate_unprotected"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/RelLayHeight"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorGrey" />
+
+                <ImageView
+                    android:id="@+id/imageViewO"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@mipmap/ic_sex_gommo" />
+
+                <ImageView
+                    android:id="@+id/imageInfoGommo"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="visible"
+                    android:tint="@color/colorBlack"
+                    app:srcCompat="@mipmap/ic_info_outline_white_48dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/imageViewO"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/cal_intimate_protected"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/RelLayHeight"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorGrey" />
+
+                <ImageView
+                    android:id="@+id/imageViewP"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@+id/txtOptionTitleP"
+                    android:layout_alignParentLeft="true"
+                    android:background="@mipmap/ic_fertile" />
+
+                <TextView
+                    android:id="@+id/txtOptionTitleP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageViewP"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/cal_fertile"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imageInfoFertile"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:tint="@color/colorBlack"
+                    android:visibility="visible"
+                    app:srcCompat="@mipmap/ic_info_outline_white_48dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorGrey" />
+
+                <ImageView
+                    android:id="@+id/imageViewBMI2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@+id/txtOptionTitleBMI2"
+                    android:layout_alignParentLeft="true"
+                    android:background="@mipmap/ic_cal_ovul" />
+
+                <TextView
+                    android:id="@+id/txtOptionTitleBMI2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageViewBMI2"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/cal_ovulation"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imageInfoOvulation"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="visible"
+                    android:tint="@color/colorBlack"
+                    app:srcCompat="@mipmap/ic_info_outline_white_48dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorGrey" />
+
+                <ImageView
+                    android:id="@+id/imageViewBMI"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@+id/txtOptionTitleBMI"
+                    android:layout_alignParentLeft="true"
+                    android:background="@mipmap/ic_cal_ovul_ins" />
+
+                <TextView
+                    android:id="@+id/txtOptionTitleBMI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageViewBMI"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/cal_ovulation_test"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <View
+                    android:id="@+id/dividerSVT"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorGrey" />
+
+                <ImageView
+                    android:id="@+id/imageViewSVT"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/dividerSVT"
+                    android:layout_alignParentBottom="false"
+                    android:layout_toRightOf="@+id/imageView9"
+                    android:background="@mipmap/ic_cal_flow_5" />
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/dividerSVT"
+                    android:layout_alignParentBottom="false"
+                    android:layout_toRightOf="@+id/imageView8"
+                    android:background="@mipmap/ic_cal_flow_4" />
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/dividerSVT"
+                    android:layout_alignParentBottom="false"
+                    android:layout_toRightOf="@+id/imageView7"
+                    android:background="@mipmap/ic_cal_flow_3" />
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/dividerSVT"
+                    android:layout_alignParentBottom="false"
+                    android:layout_toRightOf="@+id/imageView6"
+                    android:background="@mipmap/ic_cal_flow_2" />
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@+id/imageView7"
+                    android:layout_alignParentLeft="true"
+                    android:background="@mipmap/ic_cal_flow_1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageViewSVT"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/cal_spotting"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imageInfoSpotting"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="visible"
+                    android:tint="@color/colorBlack"
+                    app:srcCompat="@mipmap/ic_info_outline_white_48dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorGrey" />
+
+                <ImageView
+                    android:id="@+id/imageViewBLOOD"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@+id/txtOptionTitleBLOOD"
+                    android:layout_alignParentLeft="true"
+                    android:background="@mipmap/ic_pill2" />
+
+                <TextView
+                    android:id="@+id/txtOptionTitleBLOOD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageViewBLOOD"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/cal_medicine"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorGrey" />
+
+                <ImageView
+                    android:id="@+id/imageViewCalNote"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@+id/txtOptionTitleCalNote"
+                    android:layout_alignParentLeft="true"
+                    android:background="@mipmap/ic_cal_note1" />
+
+                <TextView
+                    android:id="@+id/txtOptionTitleCalNote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageViewCalNote"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/cal_note"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <View
+                    android:id="@+id/dividerCalNoteX"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorGrey" />
+
+                <ImageView
+                    android:id="@+id/imageViewCalNoteX"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@+id/txtOptionTitleCalNoteX"
+                    android:layout_alignParentLeft="true"
+                    android:background="@mipmap/ic_moon_fm" />
+
+                <ImageView
+                    android:id="@+id/imageView25"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/imageViewCalNoteX"
+                    android:background="@mipmap/ic_moon_fq" />
+
+                <ImageView
+                    android:id="@+id/imageView26"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/imageView25"
+                    android:background="@mipmap/ic_moon_nm" />
+
+                <ImageView
+                    android:id="@+id/imageView27"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/imageView26"
+                    android:background="@mipmap/ic_moon_lq" />
+
+                <TextView
+                    android:id="@+id/txtOptionTitleCalNoteX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dividerCalNoteX"
+                    android:layout_toRightOf="@+id/imageView27"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/app_name_moonphase"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorGrey" />
+
+                <ImageView
+                    android:id="@+id/imageInfoDisclaimer"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@+id/txtOptionTitleDisclaimer"
+                    android:layout_alignParentLeft="true"
+                    android:background="@mipmap/ic_info_white_48dp" />
+
+                <TextView
+                    android:id="@+id/txtOptionTitleDisclaimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageInfoDisclaimer"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/cal_disclaimer_title"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

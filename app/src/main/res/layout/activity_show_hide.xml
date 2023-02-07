@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/all_bg"
+    android:padding="@dimen/_10sdp"
+    >
+
+    <TextView
+        android:id="@+id/txtTitleBlood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_horizontal"
+        android:text="@string/moods_show_new"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/colorBlack"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textDes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTitleBlood"
+        android:layout_centerHorizontal="true"
+        android:text="@string/settings_show_hide"
+        android:textColor="@color/colorBlack" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageQMark"
+        android:layout_below="@+id/textDes"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="13dp"
+        android:scrollbars="none"
+        android:padding="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/RelLayFirstDayWeek"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/RelLayHeight"
+                android:layout_alignParentLeft="true">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorBlack" />
+
+                <TextView
+                    android:id="@+id/txtOptionTitle25678x"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:text="@string/option_calendar"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtFirstDayWeek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:alpha="1"
+                    android:paddingBottom="2dp"
+                    android:text="textextext"
+                    android:textColor="@color/colorPink2"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtOptionDes25678x"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtOptionTitle25678x"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="5dp"
+                    android:alpha="1"
+                    android:paddingBottom="2dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/txtOptionDes25678x"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorBlack" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/RelLayHeight"
+                android:layout_alignParentLeft="true">
+
+                <View
+                    android:id="@+id/divider125678"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorBlack" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignBottom="@+id/txtOptionTitle25678"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageView16"
+                    app:srcCompat="@mipmap/ic_fertile" />
+
+                <ImageView
+                    android:id="@+id/imageView16"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/txtOptionTitle25678"
+                    app:srcCompat="@mipmap/ic_cal_ovul" />
+
+                <TextView
+                    android:id="@+id/txtOptionTitle25678"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:text="@string/show_ovul"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtOptionDes25678"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtOptionTitle25678"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="5dp"
+                    android:alpha="1"
+                    android:paddingBottom="2dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/divider225678"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/txtOptionDes25678"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorBlack" />
+
+                <Switch
+                    android:id="@+id/OvulFertileSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/divider225678"
+                    android:layout_below="@+id/divider125678"
+                    android:layout_alignParentRight="true"
+                    android:theme="@style/SCBSwitch" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/RelLayHeight"
+                android:layout_alignParentLeft="true">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@+id/txtOptionTitle256"
+                    app:srcCompat="@mipmap/ic_cal_pill" />
+
+                <View
+                    android:id="@+id/divider1256"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorBlack" />
+
+                <TextView
+                    android:id="@+id/txtOptionTitle256"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:text="@string/pills_title"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtOptionDes256"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtOptionTitle256"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="5dp"
+                    android:alpha="1"
+                    android:paddingBottom="2dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/divider2256"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/txtOptionDes256"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorBlack" />
+
+                <Switch
+                    android:id="@+id/MedicinesSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/divider2256"
+                    android:layout_below="@+id/divider1256"
+                    android:layout_alignParentRight="true"
+                    android:theme="@style/SCBSwitch" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/RelLayHeight"
+                android:layout_alignParentLeft="true">
+
+                <View
+                    android:id="@+id/divider12567"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorBlack" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@+id/txtOptionTitle2567"
+                    app:srcCompat="@mipmap/ic_gravidanza" />
+
+                <TextView
+                    android:id="@+id/txtOptionTitle2567"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:text="@string/cal_fertility_level_title"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtOptionDes2567"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtOptionTitle2567"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="5dp"
+                    android:alpha="1"
+                    android:paddingBottom="2dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/divider22567"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/txtOptionDes2567"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorBlack" />
+
+                <Switch
+                    android:id="@+id/PregnancySwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/divider22567"
+                    android:layout_below="@+id/divider12567"
+                    android:layout_alignParentRight="true"
+                    android:theme="@style/SCBSwitch" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/RelLayHeight"
+                android:layout_alignParentLeft="true">
+
+                <View
+                    android:id="@+id/divider125"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorBlack" />
+
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@+id/txtOptionTitle25"
+                    app:srcCompat="@mipmap/ic_sex" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignBottom="@+id/txtOptionTitle25"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageView12"
+                    app:srcCompat="@mipmap/ic_sex_gommo" />
+
+                <TextView
+                    android:id="@+id/txtOptionTitle25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:text="@string/gommo_options_title"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtOptionDes25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtOptionTitle25"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="5dp"
+                    android:alpha="1"
+                    android:paddingBottom="2dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/divider225"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/txtOptionDes25"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorBlack" />
+
+                <Switch
+                    android:id="@+id/IntimateSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/divider225"
+                    android:layout_below="@+id/divider125"
+                    android:layout_alignParentRight="true"
+                    android:theme="@style/SCBSwitch" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/RelLayHeight"
+                android:layout_alignParentLeft="true">
+
+                <View
+                    android:id="@+id/divider12"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorBlack" />
+
+                <TextView
+                    android:id="@+id/txtOptionTitle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:text="@string/cycle_days"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@+id/txtOptionTitle2"
+                    android:background="@color/colorRossoMestruoC" />
+
+                <TextView
+                    android:id="@+id/txtOptionDes2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtOptionTitle2"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="5dp"
+                    android:alpha="1"
+                    android:paddingBottom="2dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/divider22"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/txtOptionDes2"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorBlack" />
+
+                <Switch
+                    android:id="@+id/CycleDaysSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/divider22"
+                    android:layout_below="@+id/divider12"
+                    android:layout_alignParentRight="true"
+                    android:theme="@style/SCBSwitch" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/RelLayHeight"
+                android:layout_alignParentLeft="true">
+
+                <View
+                    android:id="@+id/divider1256789"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorBlack" />
+
+                <TextView
+                    android:id="@+id/txtOptionTitle256789"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:text="@string/log_future_periods"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@+id/txtOptionTitle256789"
+                    android:background="@color/colorFutureMestruoC" />
+
+                <TextView
+                    android:id="@+id/txtOptionDes256789"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtOptionTitle256789"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="5dp"
+                    android:alpha="1"
+                    android:paddingBottom="2dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/divider2256789"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/txtOptionDes256789"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:background="@color/colorBlack" />
+
+                <Switch
+                    android:id="@+id/FuturePeriodSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/divider2256789"
+                    android:layout_below="@+id/divider1256789"
+                    android:layout_alignParentRight="true"
+                    android:theme="@style/SCBSwitch" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageQMark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/ic_visibility_white_48dp"
+        android:tint="@color/colorBlack"
+        />
+</RelativeLayout>

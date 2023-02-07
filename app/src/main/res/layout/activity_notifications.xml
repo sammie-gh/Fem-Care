@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/all_bg"
+    android:padding="@dimen/_10sdp">
+
+
+    <TextView
+        android:id="@+id/textDes"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTitleBlood"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/_10sdp"
+        android:text="@string/settings_notification2"
+        android:textColor="@color/colorBlack"
+        android:textSize="12sp" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/textDes"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:alpha="0.5"
+        android:background="@color/colorBlack" />
+
+    <ListView
+        android:id="@+id/listDefNotifications"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider1"
+        android:layout_alignParentBottom="true" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/NewAlarmButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/colorWhite"
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:text="@string/settings_notifiche_add"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

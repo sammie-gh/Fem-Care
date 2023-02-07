@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="days_array">
+        <item>понедельник</item>
+        <item>вторник</item>
+        <item>среда</item>
+        <item>четверг</item>
+        <item>пятница</item>
+        <item>суббота</item>
+        <item>воскресенье</item>
+    </array>
+    <array name="itemStopPregnancy">
+        <item>Поставлено или выкинуто</item>
+        <item>Ошибка или нет Беременность</item>
+    </array>
+    <array name="itemdialogaveragecycle">
+        <item>Последние данные за 3 месяца</item>
+        <item>Последние данные за 6 месяца</item>
+        <item>Последние данные за 12 месяца</item>
+        <item>Все исторические данные</item>
+        <item>умный расчет</item>
+    </array>
+    <array name="itemdialogweekdays">
+        <item>суббота</item>
+        <item>воскресенье</item>
+        <item>понедельник</item>
+    </array>
+    <array name="itemname">
+        <item>Period Length</item>
+        <item>Cycle Length</item>
+        <item>Ovulation and Fertile</item>
+        <item>Security</item>
+        <item>Calendar Options</item>
+        <item>Reminders</item>
+        <item>Symptoms</item>
+        <item>Moods</item>
+        <item>Pills</item>
+        <item>Pregnancy</item>
+        <item>Backup</item>
+        <item>Restore</item>
+        <item>Account</item>
+        <item>Measure Units</item>
+        <item>Change Language</item>
+        <item>Rate the App</item>
+        <item>Share</item>
+        <item>Delete all data</item>
+    </array>
+    <array name="itemnamebackup">
+        <item>SD Card</item>
+    </array>
+    <array name="itemnamerestore">
+        <item>Memoria SD</item>
+    </array>
+
+</resources>

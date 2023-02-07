@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="days_array">
+        <item>Lunes</item>
+        <item>Martes</item>
+        <item>Miércoles</item>
+        <item>Jueves</item>
+        <item>Viernes</item>
+        <item>Sábado</item>
+        <item>Domingo</item>
+    </array>
+    <array name="itemStopPregnancy">
+        <item>Parto o aborto espontáneo</item>
+        <item>Activado por error</item>
+    </array>
+    <array name="itemdialogaveragecycle">
+        <item>Datos de los últimos 3 meses</item>
+        <item>Datos de los últimos 6 meses</item>
+        <item>Datos de los últimos 12 meses</item>
+        <item>Todos los datos históricos</item>
+        <item>Cálculo inteligente</item>
+    </array>
+    <array name="itemdialogweekdays">
+        <item>SÁBADO</item>
+        <item>DOMINGO</item>
+        <item>LUNES</item>
+    </array>
+    <array name="itemname">
+        <item>Period Length</item>
+        <item>Cycle Length</item>
+        <item>Ovulation and Fertile</item>
+        <item>Security</item>
+        <item>Calendar Options</item>
+        <item>Reminders</item>
+        <item>Symptoms</item>
+        <item>Moods</item>
+        <item>Pills</item>
+        <item>Pregnancy</item>
+        <item>Backup</item>
+        <item>Restore</item>
+        <item>Account</item>
+        <item>Measure Units</item>
+        <item>Change Language</item>
+        <item>Rate the App</item>
+        <item>Share</item>
+        <item>Delete all data</item>
+    </array>
+    <array name="itemnamebackup">
+        <item>SD Card</item>
+    </array>
+    <array name="itemnamerestore">
+        <item>Memoria SD</item>
+    </array>
+
+</resources>

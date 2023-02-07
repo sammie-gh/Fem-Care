@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sammiegh.femcare">
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <permission
+        android:name="com.sammiegh.femcare.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <application
+        android:name="com.sammiegh.femcare.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:hardwareAccelerated="true"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
+        >
+
+        <activity
+            android:name="com.sammiegh.femcare.activity.SplashScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sammiegh.femcare.activity.LoginPinActivity"
+            android:label="@string/app_name_settings"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLogin" />
+        <activity
+            android:name="com.sammiegh.femcare.activity.MainActivity"
+            android:label="@string/app_name_toolbar"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.sammiegh.femcare.activity.CustomCalendarActivity"
+            android:label="@string/activity_calendar"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="com.sammiegh.femcare.activity.NoteActivity"
+            android:label="@string/menu_add_note"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNote">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.sammiegh.femcare.activity.SettingsActivity"
+            android:label="@string/app_name_toolbar"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.sammiegh.femcare.activity.PinInsertActivity"
+            android:label="@string/app_name_settings"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSetting">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="com.sammiegh.femcare.activity.CycleLenghtActivity"
+            android:label="@string/app_name_settings"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSetting">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="com.sammiegh.femcare.activity.PeriodLengthActivity"
+            android:label="@string/app_name_settings"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSetting">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="com.sammiegh.femcare.activity.OvulationActivity"
+            android:label="@string/app_name_settings"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSetting">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="com.sammiegh.femcare.activity.UnitsActivity"
+            android:label="@string/app_name_settings"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSetting">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="com.sammiegh.femcare.activity.AccountsActivity"
+            android:label="@string/app_name_settings"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSetting">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="com.sammiegh.femcare.activity.LanguageActivity"
+            android:label="@string/app_name_settings"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSetting">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="com.sammiegh.femcare.activity.MoodsActivity"
+            android:label="@string/app_name_settings"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSetting">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="com.sammiegh.femcare.activity.NewMoodActivity"
+            android:label="@string/menu_note_moods"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSetting">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.MoodsActivity" />
+        </activity>
+
+        <activity
+            android:name="com.sammiegh.femcare.activity.PillsActivity"
+            android:label="@string/app_name_settings"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSetting">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="com.sammiegh.femcare.activity.NewPillActivity"
+            android:label="@string/pills_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSetting">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.PillsActivity" />
+        </activity>
+        <activity
+            android:name="com.sammiegh.femcare.activity.SymptomsActivity"
+            android:label="@string/app_name_settings"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSetting">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="com.sammiegh.femcare.activity.NewSymptomActivity"
+            android:label="@string/menu_note_symptoms"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSetting">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.SymptomsActivity" />
+        </activity>
+        <activity
+            android:name="com.sammiegh.femcare.activity.BackupActivity"
+            android:label="@string/app_name_settings"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSetting">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="com.sammiegh.femcare.activity.RestoreActivity"
+            android:label="@string/app_name_settings"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSetting">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.SettingsActivity" />
+        </activity>
+
+        <activity
+            android:name="com.sammiegh.femcare.activity.OpenBackupEmailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSetting"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="gmail-ls"
+                    android:mimeType="application/octet-stream"
+                    android:scheme="content" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sammiegh.femcare.activity.GommoActivity"
+            android:label="@string/menu_note"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSetting" />
+        <activity
+            android:name="com.sammiegh.femcare.activity.PillsFragment5Activity"
+            android:label="@string/menu_note_others"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSetting" />
+        <activity
+            android:name="com.sammiegh.femcare.activity.ExtraDetailsActivity"
+            android:label="@string/menu_note"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSetting" />
+        <activity
+            android:name="com.sammiegh.femcare.activity.BloodPressureActivity"
+            android:label="@string/menu_note"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSetting" />
+        <activity
+            android:name="com.sammiegh.femcare.activity.LegendaCalendarActivity"
+            android:label="@string/menu_calendar"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLegenda">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.CustomCalendarActivity" />
+        </activity>
+        <activity
+            android:name="com.sammiegh.femcare.activity.ShowHideActivity"
+            android:label="@string/app_name_settings"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSetting">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="com.sammiegh.femcare.activity.LogActivity"
+            android:label="@string/app_name_toolbar"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNote">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.sammiegh.femcare.activity.ChartsActivity"
+            android:label="@string/app_name_toolbar"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNote">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.sammiegh.femcare.activity.ProgressActivity"
+            android:label="@string/app_name_toolbar"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNote">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.sammiegh.femcare.activity.CycleWikiActivity"
+            android:label="@string/main_cycle"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNote">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.ProgressActivity" />
+        </activity>
+        <activity
+            android:name="com.sammiegh.femcare.activity.NotificationsActivity"
+            android:label="@string/app_name_settings"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSetting">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="com.sammiegh.femcare.activity.NotificationDetailActivity"
+            android:label="@string/settings_notifiche"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSetting">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.NotificationsActivity" />
+        </activity>
+        <activity
+            android:name="com.sammiegh.femcare.activity.NewAlarmActivity"
+            android:label="@string/settings_notifiche"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSetting">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.NotificationsActivity" />
+        </activity>
+        <activity
+            android:name="com.sammiegh.femcare.activity.PregnancyActivity"
+            android:label="@string/app_name_settings"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSetting">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sammiegh.femcare.activity.SettingsActivity" />
+        </activity>
+
+        <receiver
+            android:name="com.sammiegh.femcare.servise.EvaBootReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.sammiegh.femcare.servise.EvaAlarmReceiver"
+            android:enabled="true" />
+
+        <service android:name="com.sammiegh.femcare.servise.EvaSchedulingService" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id" /> <!-- Activity required to show ad overlays. -->
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.sammiegh.femcare.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+
+        <activity
+            android:name="com.sammiegh.femcare.pill_reminder.Pill_MainActivity"
+            android:theme="@style/AppThemeNote"
+            />
+        <activity
+            android:name="com.sammiegh.femcare.pill_reminder.ReminderAddActivity"
+            android:label="@string/title_activity_add_reminder"
+            android:theme="@style/AppThemeNote"
+            />
+        <activity
+            android:name="com.sammiegh.femcare.pill_reminder.ReminderEditActivity"
+            android:label="@string/title_activity_edit_reminder"
+            android:theme="@style/AppThemeNote"
+
+            />
+
+        <receiver android:name="com.sammiegh.femcare.pill_reminder.AlarmReceiver" />
+
+        <receiver android:name="com.sammiegh.femcare.pill_reminder.BootReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+</manifest>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="days_array">
+        <item>Montag</item>
+        <item>Dienstag</item>
+        <item>Mittwoch</item>
+        <item>Donnerstag</item>
+        <item>Freitag</item>
+        <item>Samstag</item>
+        <item>Sonntag</item>
+    </array>
+    <array name="itemStopPregnancy">
+        <item>Geburt oder Fehlgeburt</item>
+        <item>Aus versehen eingeschaltet</item>
+    </array>
+    <array name="itemdialogaveragecycle">
+        <item>Letzte 3 Monate Daten</item>
+        <item>Letzte 6 Monate Daten</item>
+        <item>Letzte 12 Monate Daten</item>
+        <item>Alle historischen Daten</item>
+        <item>Intelligent Rechnung</item>
+    </array>
+    <array name="itemdialogweekdays">
+        <item>SAMSTAG</item>
+        <item>SONNTAG</item>
+        <item>MONTAG</item>
+    </array>
+    <array name="itemname">
+        <item>Period Length</item>
+        <item>Cycle Length</item>
+        <item>Ovulation and Fertile</item>
+        <item>Security</item>
+        <item>Calendar Options</item>
+        <item>Reminders</item>
+        <item>Symptoms</item>
+        <item>Moods</item>
+        <item>Pills</item>
+        <item>Pregnancy</item>
+        <item>Backup</item>
+        <item>Restore</item>
+        <item>Account</item>
+        <item>Measure Units</item>
+        <item>Change Language</item>
+        <item>Rate the App</item>
+        <item>Share</item>
+        <item>Delete all data</item>
+    </array>
+    <array name="itemnamebackup">
+        <item>SD Card</item>
+    </array>
+    <array name="itemnamerestore">
+        <item>Memoria SD</item>
+    </array>
+
+</resources>

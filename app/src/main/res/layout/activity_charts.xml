@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/all_bg"
+    android:paddingLeft="@dimen/activity_horizontal_margin_calendar"
+    android:paddingTop="@dimen/activity_vertical_calendar"
+    android:paddingRight="@dimen/activity_horizontal_margin_calendar"
+    android:paddingBottom="@dimen/activity_vertical_calendar">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="@string/menu_charts" />
+
+
+    <LinearLayout
+        android:id="@+id/scrollTypeChart"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:padding="6dp"
+            android:id="@+id/imgCiclo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:src="@drawable/cycle" />
+
+        <ImageView
+            android:padding="6dp"
+            android:id="@+id/imgMestruo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:src="@drawable/period" />
+
+        <ImageView
+            android:padding="6dp"
+            android:id="@+id/imgWeight"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:src="@drawable/weight" />
+
+        <ImageView
+            android:padding="6dp"
+            android:id="@+id/imgTemp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:src="@drawable/temperature" />
+
+   </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/dividertop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scrollTypeChart"
+        android:layout_centerHorizontal="true"
+        >
+        <RelativeLayout
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/typeChart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="ChartType"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relLayTemp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/dividertop"
+        android:visibility="gone">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chartTemp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relLayNoCharts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/dividertop"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imgNoCharts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtNoCharts"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            app:srcCompat="@drawable/upnochart" />
+
+        <TextView
+            android:id="@+id/txtNoCharts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_horizontal"
+            android:text="@string/chart_available"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorMucus1"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relLayMestrui"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/dividertop"
+        android:visibility="visible">
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chartMestrui"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relLayCycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/dividertop"
+        android:visibility="gone">
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chartCycle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relLayWeight"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/dividertop"
+        android:visibility="gone">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chartWeight"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+</RelativeLayout>

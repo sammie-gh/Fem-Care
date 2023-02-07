@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorAccent">#e9b2ff</color>
+    <color name="colorPrimary">#8254c6</color>
+    <color name="colorPrimaryDark">#8254c6</color>
+
+    <color name="black">#ff000000</color>
+
+    <color name="colorBackCalendar2">#ffffff</color>
+    <color name="colorBackCalendar3">#ffffff</color>
+    <color name="colorBackNote">#faf9f7</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBluTiffany">#0abab5</color>
+    <color name="colorBluTiffanyDark">#087e7f</color>
+    <color name="colorBrownLight">#8c4715</color>
+    <color name="colorCoffeeBrown">#4b3621</color>
+    <color name="colorDisplay">#ffff00</color>
+    <color name="colorDisplay2">#1aeee8</color>
+    <color name="colorFutureMestruoC">#efacd8</color>
+    <color name="colorGreen">#009faa</color>
+    <color name="colorGrey">#9d9d9d</color>
+    <color name="colorList2">#00aaa4</color>
+    <color name="colorMucus1">#303f9f</color>
+    <color name="colorPink1">#ec647a</color>
+    <color name="colorPink2">#902d3d</color>
+    <color name="colorPink4">#e5305b</color>
+    <color name="colorPulse">#ff0000</color>
+    <color name="colorRossoMestruoC">#f48ba1</color>
+    <color name="colorTitleList">#464646</color>
+    <color name="colorToday">#cecece</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="white">#fff</color>
+
+    <color name="dark_gray">#393939</color>
+    <color name="bg">#E8E8E8</color>
+    <color name="greyish">#aaa8a8</color>
+
+    <color name="grey_calendar">#434343</color>
+    <color name="transperent">#00ffffff</color>
+
+</resources>

@@ -1,0 +1,89 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppThemeSetting" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppThemeNote" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="homeAsUpIndicator">@mipmap/ic_home</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPink2</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="homeAsUpIndicator">@mipmap/ic_home</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppThemeLogin" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="homeAsUpIndicator">@mipmap/ic_home</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppThemeLegenda" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="SCBSwitch">
+        <item name="android:colorForeground">#221f1f</item>
+        <item name="colorControlActivated">#1fb8be</item>
+        <item name="colorSwitchThumbNormal">#000000</item>
+    </style>
+
+    <style name="RadioCheckBox">
+        <item name="colorControlNormal">@color/colorBlack</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+    <style name="RadioCheckBox2">
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+    <style name="PeriodCheckBox">
+        <item name="colorControlNormal">@color/colorBlack</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
+    <style name="MineCustomTabText">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CustomRatingCuoreVerde">
+        <item name="android:maxHeight">36dp</item>
+        <item name="android:progressDrawable">@drawable/ratingbar_cuore_verde_selector</item>
+        <item name="android:minHeight">36dp</item>
+    </style>
+
+    <style name="FragmentNoteCheckBoxTheme">
+        <item name="colorControlNormal">@color/colorPink1</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+    <style name="NoteSwitch">
+        <item name="android:colorForeground">#221f1f</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorSwitchThumbNormal">#f1f1f1</item>
+    </style>
+
+
+    <style name="AppTheme.AdAttribution">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:text">@string/ad_attribution</item>
+        <item name="android:background">#FFCC66</item>
+        <item name="android:width">15dp</item>
+        <item name="android:height">15dp</item>
+    </style>
+
+</resources>

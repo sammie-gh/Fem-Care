@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/all_bg"
+    android:padding="@dimen/_10sdp"
+    >
+
+
+    <TextView
+
+        android:id="@+id/textDes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="@string/symptoms_custom_new"
+        android:textColor="@color/colorBlack" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/textDes"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:alpha="0.5"
+        android:background="@color/colorBlack" />
+
+    <ListView
+        android:id="@+id/listDefSymptom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layShowNewSymptom"
+        android:layout_below="@+id/linTopic"
+        android:layout_marginTop="0dp" />
+
+    <LinearLayout
+        android:id="@+id/linTopic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider1"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTitleBlood"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:text="@string/symptoms_rename_long"
+            android:textColor="@color/colorBlack"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTitleBlood"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:text="@string/symptoms_show_new"
+            android:textColor="@color/colorBlack"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layShowNewSymptom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageAdd"
+                android:padding="0dp"
+                android:text="@string/symptoms_add_new"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageAdd"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_add_circle_white_48dp"
+                android:tint="@color/colorBlack"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

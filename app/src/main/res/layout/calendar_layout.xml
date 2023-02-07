@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackCalendar3"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="@dimen/_10sdp"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:id="@+id/previous_month"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/btn_arrow_l" />
+
+                <TextView
+                    android:id="@+id/display_current_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="@string/current_date"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:id="@+id/next_month"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/btn_arrow_r" />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:padding="0.5dp"
+        android:background="@drawable/customborder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp">
+
+            <TextView
+                android:id="@+id/day1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/sun"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/day2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/mon"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/day3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/tue"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/day4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/wed"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/day5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/thu"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/day6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/fri"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/day7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/sat"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+
+        <GridView
+            android:scrollbars="none"
+            android:id="@+id/calendar_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="7"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.5"
+        android:background="@color/colorGrey" />
+
+    <LinearLayout
+        android:id="@+id/txtFertilityDateQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtData"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:text="DataSelected"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textFertilityLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:text="Fertility Info"
+            android:textColor="@color/colorGrey"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageQuestion"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.18"
+            app:srcCompat="@mipmap/ic_question_tiffany" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtFertilityDateQuestion"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="8">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtNoteView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/paper3"
+                    android:ems="10"
+                    android:gravity="top"
+                    android:hint="@string/note_text"
+                    android:inputType="textMultiLine"
+                    android:padding="10dp"
+                    android:textColor="@color/colorCoffeeBrown"
+                    android:textColorHint="@color/colorBrownLight"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="7">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ListView
+                    android:id="@+id/listDefMoods"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="0dp" />
+
+                <ListView
+                    android:id="@+id/listDefSintomi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="0dp" />
+
+                <ListView
+                    android:id="@+id/listDefMucus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="0dp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layEmptyNotes"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@color/colorBackCalendar2"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite">
+
+            <ImageView
+                android:id="@+id/imgAddNote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/btn_ins_nota" />
+
+            <TextView
+                android:id="@+id/txtAddNote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgAddNote"
+                android:layout_centerHorizontal="true"
+                android:text="@string/add_note"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

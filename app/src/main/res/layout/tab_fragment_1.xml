@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackNote"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageDate"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/imgdate" />
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="dd-MM-YYYY"
+        android:textColor="@color/colorWhite"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/RelLayEditTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RelLayUseDivider23"
+        android:clickable="true"
+        android:descendantFocusability="beforeDescendants"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageTitleNote"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:layout_weight="0.29"
+                    android:background="@drawable/paper2"
+                    android:backgroundTint="@color/bg"
+                    android:ems="10"
+                    android:gravity="top"
+                    android:hint="@string/note_text"
+                    android:inputType="textMultiLine"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/dark_gray" />
+            </LinearLayout>
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/imageHEart"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:alpha="0.8"
+            app:srcCompat="@drawable/img_allarga"
+            android:tint="@color/dark_gray"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imageHEart"
+            android:layout_alignTop="@+id/imageHEart"
+            android:layout_alignRight="@+id/imageHEart"
+            android:layout_marginTop="14dp"
+            android:text="TextView"
+            android:textSize="10sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelLayHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtDate"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp">
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:alpha="0.5"
+            android:background="@color/colorBackNote" />
+
+        <TextView
+            android:id="@+id/txtOptionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/note_period_start"
+            android:textColor="@color/colorBlack"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/txtOptionTitle"
+            android:layout_centerHorizontal="true"
+            android:alpha="0.5"
+            android:background="@color/colorGrey" />
+
+        <Switch
+            android:id="@+id/StartSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/divider2"
+            android:layout_below="@+id/divider1"
+            android:layout_alignParentRight="true"
+            android:theme="@style/NoteSwitch" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelLayUseDivider2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RelLayHeight"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp">
+
+        <View
+            android:id="@+id/divider12"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:alpha="0.5"
+            android:background="@color/colorGrey" />
+
+        <TextView
+            android:id="@+id/txtOptionTitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingTop="5dp"
+            android:textColor="@color/colorBlack"
+            android:paddingBottom="5dp"
+            android:text="@string/note_period_end"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/divider22"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/txtOptionTitle2"
+            android:layout_centerHorizontal="true"
+            android:alpha="0.5"
+            android:background="@color/colorGrey" />
+
+        <Switch
+            android:id="@+id/EndSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/divider22"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:theme="@style/NoteSwitch" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelLayUseDivider23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RelLayUseDivider2"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp">
+
+        <View
+            android:id="@+id/divider123"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:alpha="0.5"
+            android:background="@color/colorGrey" />
+
+        <TextView
+            android:id="@+id/txtOptionTitle23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/note_intercourse"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/divider223"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/txtOptionTitle23"
+            android:layout_centerHorizontal="true"
+            android:alpha="0.5"
+            android:background="@color/colorGrey" />
+
+        <ImageView
+            android:id="@+id/imgBookmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/divider223"
+            android:layout_below="@+id/divider123"
+            android:layout_toLeftOf="@+id/GommoSwitch"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/img_bookmark_cute" />
+
+        <Switch
+            android:id="@+id/GommoSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/divider223"
+            android:layout_below="@+id/divider123"
+            android:layout_alignParentRight="true"
+            android:theme="@style/NoteSwitch" />
+    </RelativeLayout>
+</RelativeLayout>
