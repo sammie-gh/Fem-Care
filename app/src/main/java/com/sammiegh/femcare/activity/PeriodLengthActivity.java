@@ -7,7 +7,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CompoundButton;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -15,10 +14,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.sammiegh.femcare.utils.Ads;
-import com.sammiegh.femcare.utils.JCGSQLiteHelper;
 import com.sammiegh.femcare.R;
 import com.sammiegh.femcare.model.Settings;
+import com.sammiegh.femcare.utils.JCGSQLiteHelper;
 import com.shawnlin.numberpicker.NumberPicker;
 
 public class PeriodLengthActivity extends AppCompatActivity {
@@ -41,7 +39,7 @@ public class PeriodLengthActivity extends AppCompatActivity {
     TextView txtDesUseAverage;
     int uid;
     String value;
-    private Ads ads;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -50,10 +48,8 @@ public class PeriodLengthActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(getString(R.string.period_lenght));
 
-        ads = new Ads(PeriodLengthActivity.this);
 
-        FrameLayout nativeAdContainer = findViewById(R.id.native_ad_container);
-        ads.loadNativeAd( nativeAdContainer);
+
 
         db = new JCGSQLiteHelper(getApplicationContext());
         numberPicker = (NumberPicker) findViewById(R.id.number_picker);

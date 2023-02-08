@@ -7,13 +7,11 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.sammiegh.femcare.utils.JCGSQLiteHelper;
-import com.sammiegh.femcare.model.Note;
-import com.sammiegh.femcare.R;
-import com.sammiegh.femcare.model.Settings;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.sammiegh.femcare.R;
+import com.sammiegh.femcare.model.Note;
+import com.sammiegh.femcare.model.Settings;
+import com.sammiegh.femcare.utils.JCGSQLiteHelper;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -158,20 +156,7 @@ public class LogActivity extends AppCompatActivity {
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(getString(R.string.note_title));
-        mAdView = (AdView) findViewById(R.id.adViewNative);
-        mAdView.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                mAdView.setVisibility(View.VISIBLE);
-            }
 
-            @Override
-            public void onAdFailedToLoad(int errorCode) {
-
-            }
-        });
-        mAdView.loadAd(new AdRequest.Builder().build());
-        mAdView.setVisibility(View.VISIBLE);
         txtNextP1 = (TextView) findViewById(R.id.txtNextP1);
         txtNextP2 = (TextView) findViewById(R.id.txtNextP2);
         txtNextP3 = (TextView) findViewById(R.id.txtNextP3);

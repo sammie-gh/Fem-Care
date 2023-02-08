@@ -102,7 +102,7 @@
                     android:layout_alignTop="@+id/txtOptionTitle"
                     android:layout_toRightOf="@+id/txtOptionTitle"
                     android:src="@mipmap/ic_info_white_48dp"
-                    android:tint="@color/colorGrey" />
+                    app:tint="@color/colorGrey" />
 
                 <Switch
                     android:id="@+id/CycleSwitch"
@@ -121,7 +121,7 @@
                 android:layout_below="@+id/RelLayHeight"
                 android:layout_centerHorizontal="true"
                 android:src="@mipmap/ic_durata_mestruazioni"
-                android:tint="@color/black" />
+                app:tint="@color/black" />
         </RelativeLayout>
 
     </androidx.core.widget.NestedScrollView>

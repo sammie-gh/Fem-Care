@@ -16,16 +16,14 @@ import androidx.fragment.app.Fragment;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.sammiegh.femcare.utils.JCGSQLiteHelper;
-import com.sammiegh.femcare.model.Note;
+import com.google.android.gms.ads.AdView;
 import com.sammiegh.femcare.R;
-import com.sammiegh.femcare.model.Settings;
-import com.sammiegh.femcare.model.User;
 import com.sammiegh.femcare.activity.PillsFragment5Activity;
 import com.sammiegh.femcare.activity.UnitsActivity;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
+import com.sammiegh.femcare.model.Note;
+import com.sammiegh.femcare.model.Settings;
+import com.sammiegh.femcare.model.User;
+import com.sammiegh.femcare.utils.JCGSQLiteHelper;
 
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
@@ -118,19 +116,7 @@ public class TabFragment5 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.tab_fragment_5, container, false);
-        mAdView = (AdView) view.findViewById(R.id.adViewNativeFrag5);
-        mAdView.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                mAdView.setVisibility(View.VISIBLE);
-            }
 
-            @Override
-            public void onAdFailedToLoad(int errorCode) {
-            }
-        });
-        mAdView.loadAd(new AdRequest.Builder().build());
-        mAdView.setVisibility(View.VISIBLE);
         textDate = (TextView) view.findViewById(R.id.txtDate);
         texTemperature = (TextView) view.findViewById(R.id.txtOptionTitleTemp);
         texWeight = (TextView) view.findViewById(R.id.txtOptionTitleWe);

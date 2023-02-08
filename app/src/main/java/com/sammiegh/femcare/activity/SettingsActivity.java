@@ -92,6 +92,8 @@ public class SettingsActivity extends AppCompatActivity {
 
 
         Utils.showBannerAds(this);
+
+
         Typeface BillFont = Typeface.createFromAsset(getAssets(), getString(R.string.app_bar_font));
         String actionBarTitle = "Setting";
         SpannableStringBuilder ssb = new SpannableStringBuilder(actionBarTitle);

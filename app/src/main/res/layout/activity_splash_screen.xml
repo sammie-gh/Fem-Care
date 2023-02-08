@@ -10,8 +10,9 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/bg"
-        />
+        android:src="@drawable/bg" />
+
+
     <com.comix.overwatch.HiveProgressView
         android:id="@+id/progresCC"
         android:layout_width="100dp"
@@ -35,6 +36,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:text="@string/text_install"
+        android:fontFamily="@font/love"
         android:textSize="18sp"
         android:textStyle="bold"
         android:visibility="invisible" />

@@ -124,7 +124,7 @@
     <string name="hip_title">Hip</string>
     <string name="intro_welcome_des">Welcome to your new \"Fem Care\" menstrual calendar. Please, enter your the beginning date of your last menstruation period. Enter also your menstruation and cycle usual periods.</string>
     <string name="intro_welcome_first_date">Start Date Last Menstruation period</string>
-    <string name="intro_welcome_title">Welcome to \"Fem Care\"</string>
+    <string name="intro_welcome_title">Fem Care</string>
     <string name="languages_title">Language</string>
     <string name="log_average_cycle_lenght1">Average cycle length</string>
     <string name="log_average_menstruation_lenght">Average menstruation length (last 12 months)</string>
@@ -153,7 +153,7 @@
     <string name="main_mestruazioni_inizio">Period just started</string>
     <string name="main_mestruazioni_nextp">Left</string>
     <string name="main_mestruazioni_tap">Click Here!</string>
-    <string name="main_next_fertile">Next Fertile Period:</string>
+    <string name="main_next_fertile">Next Fertile Date:</string>
     <string name="main_next_mestruazioni">Next Period:</string>
     <string name="menu_add_note">Add Note</string>
     <string name="menu_add_note_done">Save</string>

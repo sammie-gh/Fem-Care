@@ -10,14 +10,12 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
-import com.sammiegh.femcare.utils.JCGSQLiteHelper;
+import com.google.android.gms.ads.AdView;
 import com.sammiegh.femcare.R;
+import com.sammiegh.femcare.adepter.TabFragment2Adapter;
 import com.sammiegh.femcare.model.Settings;
 import com.sammiegh.femcare.model.User;
-import com.sammiegh.femcare.adepter.TabFragment2Adapter;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
+import com.sammiegh.femcare.utils.JCGSQLiteHelper;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -52,19 +50,9 @@ public class TabFragment2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.tab_fragment_2, container, false);
-        mAdView = (AdView) view.findViewById(R.id.adViewNativeFrag2);
-        mAdView.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                mAdView.setVisibility(View.VISIBLE);
-            }
 
-            @Override
-            public void onAdFailedToLoad(int errorCode) {
-            }
-        });
-        mAdView.loadAd(new AdRequest.Builder().build());
-        mAdView.setVisibility(View.VISIBLE);
+
+
         textDate = (TextView) view.findViewById(R.id.txtDate);
         sDateKey = getArguments().getString("datekey");
         oggiDateCheck = new Date();
