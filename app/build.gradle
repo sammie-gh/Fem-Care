@@ -15,10 +15,21 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+
+//        debug {
+//            minifyEnabled true
+//            shrinkResources true
+//            debuggable true
+//
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//        }
+
     }
+
     lintOptions {
         checkReleaseBuilds false
         // Or, if you prefer, you can continue to check for errors in release builds,
@@ -67,7 +78,7 @@ dependencies {
     implementation 'com.getbase:floatingactionbutton:1.10.0'
     implementation 'com.wdullaer:materialdatetimepicker:4.2.3'
     implementation 'com.airbnb.android:lottie:4.2.2'
-
+    implementation 'androidx.work:work-runtime-ktx:2.7.0'
 //    implementation project(':IRBottomNavigationLib')
 
 }

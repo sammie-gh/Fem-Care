@@ -12,7 +12,7 @@ import android.widget.GridView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.sammiegh.femcare.utils.JCGSQLiteHelper;
-import com.sammiegh.femcare.adepter.LanguageAdapter;
+import com.sammiegh.femcare.adapter.LanguageAdapter;
 import com.sammiegh.femcare.R;
 import com.sammiegh.femcare.model.Settings;
 

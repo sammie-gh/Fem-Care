@@ -5,6 +5,7 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 
 import com.sammiegh.femcare.utils.JCGSQLiteHelper;
 import com.sammiegh.femcare.model.Notifications;
@@ -87,7 +88,10 @@ public class EvaBootReceiver extends BroadcastReceiver {
                 alarmIntent = new Intent(context.getApplicationContext(), EvaAlarmReceiver.class);
                 alarmIntent.putExtra("tipo", String.valueOf(notificationsSelected[i].getType()));
                 alarmIntent.putExtra("giorniprima", String.valueOf(notificationsSelected[i].getIdnotifications()));
-                pendingIntent = PendingIntent.getBroadcast(context.getApplicationContext(), intentKey, alarmIntent, 0);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    pendingIntent = PendingIntent.getBroadcast(context.getApplicationContext(), intentKey, alarmIntent, PendingIntent.FLAG_IMMUTABLE);
+                }else   pendingIntent = PendingIntent.getBroadcast(context.getApplicationContext(), intentKey, alarmIntent, 0);
+
                 if (notificationsSelected[i].getType() == 0) {
                     try {
                         dateActualDATA = formatodata.parse(todayString);

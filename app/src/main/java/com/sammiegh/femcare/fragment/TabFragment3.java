@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.gms.ads.AdView;
 import com.sammiegh.femcare.R;
-import com.sammiegh.femcare.adepter.TabFragment3Adapter;
+import com.sammiegh.femcare.adapter.TabFragment3Adapter;
 import com.sammiegh.femcare.model.User;
 import com.sammiegh.femcare.utils.JCGSQLiteHelper;
 

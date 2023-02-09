@@ -18,7 +18,7 @@ import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.sammiegh.femcare.utils.JCGSQLiteHelper;
 import com.sammiegh.femcare.R;
-import com.sammiegh.femcare.adepter.RestoreAdapter;
+import com.sammiegh.femcare.adapter.RestoreAdapter;
 import com.sammiegh.femcare.model.Settings;
 
 import java.io.File;

@@ -17,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.sammiegh.femcare.utils.JCGSQLiteHelper;
 import com.sammiegh.femcare.R;
-import com.sammiegh.femcare.adepter.SymptomAdapter;
+import com.sammiegh.femcare.adapter.SymptomAdapter;
 import com.sammiegh.femcare.model.User;
 
 public class SymptomsActivity extends AppCompatActivity {

@@ -45,17 +45,18 @@ public class EvaSchedulingService extends IntentService {
         }
         sendNotification(title, getString(R.string.alarm_solo) + " " + sGiorniPrima + " " + tempGiorniS + " " + getString(R.string.alarm_mancano));
     }
+
     public static Notification notification;
 
     private void sendNotification(String title, String msg) {
 
         mNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        PendingIntent contentIntent = PendingIntent.getActivity(
-                this,
-                0,
-                new Intent(this, MainActivity.class),
-                0
-        );
+        PendingIntent contentIntent = null;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+            contentIntent = PendingIntent.getActivity(this, 0, new Intent(this, MainActivity.class), PendingIntent.FLAG_IMMUTABLE);
+        } else
+            contentIntent = PendingIntent.getActivity(this, 0, new Intent(this, MainActivity.class), 0);
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             String NOTIFICATION_CHANNEL_ID = "com.androworld.evaperiodtracker";
             String channelName = "My Remainder Service";

@@ -14,7 +14,7 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.sammiegh.femcare.utils.JCGSQLiteHelper;
-import com.sammiegh.femcare.adepter.NewSymptomAdapter;
+import com.sammiegh.femcare.adapter.NewSymptomAdapter;
 import com.sammiegh.femcare.R;
 import com.sammiegh.femcare.model.Symptoms;
 

@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.sammiegh.femcare.R;
-import com.sammiegh.femcare.adepter.SettingAdapter;
+import com.sammiegh.femcare.adapter.SettingAdapter;
 import com.sammiegh.femcare.model.Note;
 import com.sammiegh.femcare.model.Settings;
 import com.sammiegh.femcare.model.User;
@@ -95,7 +95,7 @@ public class SettingsActivity extends AppCompatActivity {
 
 
         Typeface BillFont = Typeface.createFromAsset(getAssets(), getString(R.string.app_bar_font));
-        String actionBarTitle = "Setting";
+        String actionBarTitle = "Settings";
         SpannableStringBuilder ssb = new SpannableStringBuilder(actionBarTitle);
         ssb.setSpan(new CustomTypefaceSpan("test", BillFont), 0, actionBarTitle.length(), 34);
         getSupportActionBar().setTitle((CharSequence) ssb);
@@ -144,9 +144,9 @@ public class SettingsActivity extends AppCompatActivity {
                 } else if (position == 14) {
                     startActivity(new Intent(SettingsActivity.this, LanguageActivity.class));
                 } else if (position == 15) {
-                    startActivity(new Intent("android.intent.action.VIEW", Uri.parse("https://play.google.com/store/apps/details?id=com.androworld.evaperiodtracker")));
+                    startActivity(new Intent("android.intent.action.VIEW", Uri.parse("https://play.google.com/store/apps/details?id=com.sammiegh.femcare")));
                 } else if (position == 16) {
-                    String text = getResources().getString(R.string.mess_share) + "\n\n" + getResources().getString(R.string.mess_try) + "\n" + "https://play.google.com/store/apps/details?id=com.androworld.evaperiodtracker";
+                    String text = getResources().getString(R.string.mess_share) + "\n\n" + getResources().getString(R.string.mess_try) + "\n" + "https://play.google.com/store/apps/details?id=com.sammiegh.femcare";
                     Intent intent = new Intent();
                     intent.setAction("android.intent.action.SEND");
                     intent.putExtra("android.intent.extra.TEXT", text);
@@ -169,7 +169,8 @@ public class SettingsActivity extends AppCompatActivity {
                         }
                     }).positiveText((int) R.string.dialog_OK).negativeText((int) R.string.dialog_cancel).show();
                 } else if (position == 18) {
-
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://doc-hosting.flycricket.io/fem-care-privacy-policy/9850637d-da26-4024-b181-794aa049bb72/privacy"));
+                    startActivity(browserIntent);
                 }
             }
         });

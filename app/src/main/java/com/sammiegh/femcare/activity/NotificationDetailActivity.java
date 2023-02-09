@@ -8,7 +8,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.sammiegh.femcare.utils.JCGSQLiteHelper;
-import com.sammiegh.femcare.adepter.NotificationDetailsAdapter;
+import com.sammiegh.femcare.adapter.NotificationDetailsAdapter;
 import com.sammiegh.femcare.R;
 import com.sammiegh.femcare.model.Settings;
 

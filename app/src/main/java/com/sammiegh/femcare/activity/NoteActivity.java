@@ -14,7 +14,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.sammiegh.femcare.utils.JCGSQLiteHelper;
 import com.sammiegh.femcare.model.Note;
-import com.sammiegh.femcare.adepter.PagerAdapter;
+import com.sammiegh.femcare.adapter.PagerAdapter;
 import com.sammiegh.femcare.R;
 import com.sammiegh.femcare.model.Settings;
 import com.google.android.material.tabs.TabLayout;

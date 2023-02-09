@@ -15,7 +15,7 @@ import androidx.core.content.ContextCompat;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.sammiegh.femcare.adepter.BackupAdapter;
+import com.sammiegh.femcare.adapter.BackupAdapter;
 import com.sammiegh.femcare.utils.JCGSQLiteHelper;
 import com.sammiegh.femcare.R;
 import com.sammiegh.femcare.model.Settings;

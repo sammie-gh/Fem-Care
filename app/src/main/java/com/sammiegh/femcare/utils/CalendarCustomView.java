@@ -25,10 +25,10 @@ import com.sammiegh.femcare.model.User;
 import com.sammiegh.femcare.activity.CustomCalendarActivity;
 import com.sammiegh.femcare.activity.LegendaCalendarActivity;
 import com.sammiegh.femcare.activity.NoteActivity;
-import com.sammiegh.femcare.adepter.GridAdapter;
-import com.sammiegh.femcare.adepter.MoodNoteAdapter;
-import com.sammiegh.femcare.adepter.MucusNoteAdapter;
-import com.sammiegh.femcare.adepter.SymptomNoteAdapter;
+import com.sammiegh.femcare.adapter.GridAdapter;
+import com.sammiegh.femcare.adapter.MoodNoteAdapter;
+import com.sammiegh.femcare.adapter.MucusNoteAdapter;
+import com.sammiegh.femcare.adapter.SymptomNoteAdapter;
 
 import java.text.DateFormat;
 import java.text.ParseException;

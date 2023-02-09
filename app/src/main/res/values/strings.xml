@@ -395,7 +395,7 @@
     <string name="settings_info">Contact the Support Team for info or questions</string>
     <string name="settings_lang">Change the app\'s language</string>
     <string name="settings_notification">Set reminders of your period, ovulation, pill, etc.</string>
-    <string name="settings_notification2">Set reminders of your period, ovulation and pill.\10Tap to customize time ed enable alarms.</string>
+    <string name="settings_notification2">Set reminders of your period, ovulation and pill.\10Tap to customize time and enable alarms.</string>
     <string name="settings_notifiche">Reminders</string>
     <string name="settings_notifiche_add">Add New Reminder</string>
     <string name="settings_ovulation">Set your luteal phase length</string>

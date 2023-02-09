@@ -13,6 +13,7 @@
         android:layout_height="20dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
         app:srcCompat="@drawable/imgdate" />
 
     <TextView
@@ -21,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
         android:text="dd-MM-YYYY"
         android:textColor="@color/colorWhite"
         android:textSize="10sp"
@@ -77,7 +79,7 @@
             android:layout_marginRight="10dp"
             android:alpha="0.8"
             app:srcCompat="@drawable/img_allarga"
-            android:tint="@color/dark_gray"/>
+            app:tint="@color/dark_gray" />
 
         <TextView
             android:layout_width="match_parent"

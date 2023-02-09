@@ -14,7 +14,7 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.sammiegh.femcare.utils.JCGSQLiteHelper;
-import com.sammiegh.femcare.adepter.NewPillAdapter;
+import com.sammiegh.femcare.adapter.NewPillAdapter;
 import com.sammiegh.femcare.model.Pills;
 import com.sammiegh.femcare.R;
 

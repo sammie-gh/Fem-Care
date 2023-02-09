@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.sammiegh.femcare.utils.JCGSQLiteHelper;
-import com.sammiegh.femcare.adepter.PillsFragment5Adapter;
+import com.sammiegh.femcare.adapter.PillsFragment5Adapter;
 import com.sammiegh.femcare.R;
 import com.sammiegh.femcare.model.Settings;
 import com.sammiegh.femcare.model.User;

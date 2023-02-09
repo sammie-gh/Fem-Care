@@ -124,14 +124,19 @@
         android:layout_below="@+id/dividertop"
         android:visibility="gone">
 
-        <ImageView
+
+        <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/imgNoCharts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_below="@+id/txtNoCharts"
-            android:layout_alignParentLeft="true"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="empty_red.json"
             android:layout_alignParentBottom="true"
-            app:srcCompat="@drawable/upnochart" />
+            android:layout_alignParentLeft="true"
+            app:lottie_loop="true" />
+
 
         <TextView
             android:id="@+id/txtNoCharts"

@@ -26,7 +26,7 @@ import com.sammiegh.femcare.R;
 import com.sammiegh.femcare.model.Settings;
 import com.sammiegh.femcare.model.Symptoms;
 import com.sammiegh.femcare.model.User;
-import com.sammiegh.femcare.adepter.UserAdapter;
+import com.sammiegh.femcare.adapter.UserAdapter;
 
 import java.util.Locale;
 

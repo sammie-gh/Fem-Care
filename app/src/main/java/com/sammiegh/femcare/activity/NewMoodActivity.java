@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.sammiegh.femcare.utils.JCGSQLiteHelper;
 import com.sammiegh.femcare.model.Moods;
-import com.sammiegh.femcare.adepter.NewMoodAdapter;
+import com.sammiegh.femcare.adapter.NewMoodAdapter;
 import com.sammiegh.femcare.R;
 
 public class NewMoodActivity extends AppCompatActivity {

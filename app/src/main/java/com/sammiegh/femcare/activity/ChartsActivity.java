@@ -11,11 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.ViewCompat;
 
-import com.sammiegh.femcare.utils.JCGSQLiteHelper;
-import com.sammiegh.femcare.model.Note;
-import com.sammiegh.femcare.R;
-import com.sammiegh.femcare.model.Settings;
-import com.sammiegh.femcare.model.User;
+import com.airbnb.lottie.LottieAnimationView;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.AxisBase;
@@ -28,6 +24,11 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.ValueFormatter;
+import com.sammiegh.femcare.R;
+import com.sammiegh.femcare.model.Note;
+import com.sammiegh.femcare.model.Settings;
+import com.sammiegh.femcare.model.User;
+import com.sammiegh.femcare.utils.JCGSQLiteHelper;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -64,7 +65,7 @@ public class ChartsActivity extends AppCompatActivity {
     int id_note;
     ImageView imgCiclo;
     ImageView imgMestruo;
-    ImageView imgNoCharts;
+    LottieAnimationView imgNoCharts;
     ImageView imgTemp;
     ImageView imgWeight;
     String initHeightUnit;
@@ -115,6 +116,25 @@ public class ChartsActivity extends AppCompatActivity {
     float weight;
     LineChart weightChart;
 
+    public static float fahrenheittocelsius(float input) {
+        return ((input - 32.0f) * 5.0f) / 9.0f;
+    }
+
+    public static float kgtolb(float input) {
+        return input * 2.2046f;
+    }
+
+    public static float kgtostone(float input) {
+        return input * 0.157473f;
+    }
+
+    public static String fillString(int count, char c) {
+        StringBuilder sb = new StringBuilder(count);
+        for (int i = 0; i < count; i++) {
+            sb.append(c);
+        }
+        return sb.toString();
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -124,7 +144,7 @@ public class ChartsActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         typeChart = (TextView) findViewById(R.id.typeChart);
         txtNoCharts = (TextView) findViewById(R.id.txtNoCharts);
-        imgNoCharts = (ImageView) findViewById(R.id.imgNoCharts);
+        imgNoCharts = findViewById(R.id.imgNoCharts);
         imgCiclo = (ImageView) findViewById(R.id.imgCiclo);
         imgMestruo = (ImageView) findViewById(R.id.imgMestruo);
         imgWeight = (ImageView) findViewById(R.id.imgWeight);
@@ -563,25 +583,5 @@ public class ChartsActivity extends AppCompatActivity {
         diastolic = selectedNote.getDiastolic();
         pressure = selectedNote.getPressure();
         testgravidanza = selectedNote.getTestgravidanza();
-    }
-
-    public static float fahrenheittocelsius(float input) {
-        return ((input - 32.0f) * 5.0f) / 9.0f;
-    }
-
-    public static float kgtolb(float input) {
-        return input * 2.2046f;
-    }
-
-    public static float kgtostone(float input) {
-        return input * 0.157473f;
-    }
-
-    public static String fillString(int count, char c) {
-        StringBuilder sb = new StringBuilder(count);
-        for (int i = 0; i < count; i++) {
-            sb.append(c);
-        }
-        return sb.toString();
     }
 }

@@ -1,10 +1,10 @@
 package com.sammiegh.femcare.servise;
 
+import static androidx.legacy.content.WakefulBroadcastReceiver.startWakefulService;
+
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-
-import androidx.legacy.content.WakefulBroadcastReceiver;
 
 public class EvaAlarmReceiver extends BroadcastReceiver {
     String sGiorniPrima;
@@ -17,6 +17,7 @@ public class EvaAlarmReceiver extends BroadcastReceiver {
         service = new Intent(context, EvaSchedulingService.class);
         service.putExtra("tipo", sTipo);
         service.putExtra("giorniprima", sGiorniPrima);
-        WakefulBroadcastReceiver.startWakefulService(context, service);
+        startWakefulService(context, service);
+//        WakefulBroadcastReceiver.startWakefulService(context, service);
     }
 }

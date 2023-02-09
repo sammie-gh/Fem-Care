@@ -698,7 +698,9 @@ public class MainActivity extends AppCompatActivity {
             alarmIntent = new Intent(context.getApplicationContext(), EvaAlarmReceiver.class);
             alarmIntent.putExtra("tipo", String.valueOf(notificationsSelected[i].getType()));
             alarmIntent.putExtra("giorniprima", String.valueOf(notificationsSelected[i].getIdnotifications()));
-            pendingIntent = PendingIntent.getBroadcast(context.getApplicationContext(), intentKey, alarmIntent, 0);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                pendingIntent = PendingIntent.getBroadcast(context.getApplicationContext(), intentKey, alarmIntent, PendingIntent.FLAG_IMMUTABLE);
+            }else pendingIntent = PendingIntent.getBroadcast(context.getApplicationContext(), intentKey, alarmIntent, 0);
             manager.cancel(pendingIntent);
         }
         for (int i2 = 0; i2 < selCountRow; i2++) {
@@ -706,7 +708,9 @@ public class MainActivity extends AppCompatActivity {
             alarmIntent = new Intent(context.getApplicationContext(), EvaAlarmReceiver.class);
             alarmIntent.putExtra("tipo", String.valueOf(notificationsSelected[i2].getType()));
             alarmIntent.putExtra("giorniprima", String.valueOf(notificationsSelected[i2].getIdnotifications()));
-            pendingIntent = PendingIntent.getBroadcast(context.getApplicationContext(), intentKey, alarmIntent, 0);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                pendingIntent = PendingIntent.getBroadcast(context.getApplicationContext(), intentKey, alarmIntent, PendingIntent.FLAG_IMMUTABLE);
+            }else pendingIntent = PendingIntent.getBroadcast(context.getApplicationContext(), intentKey, alarmIntent, 0);
             if (notificationsSelected[i2].getType() == 0) {
                 try {
                     dateActualDATA = formatodata.parse(todayString);
