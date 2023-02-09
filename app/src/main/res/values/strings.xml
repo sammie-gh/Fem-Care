@@ -88,7 +88,7 @@
     <string name="dialog_main_ciclo">Cycle</string>
     <string name="dialog_main_ciclo_of">of</string>
     <string name="dialog_main_end_date">END DATE</string>
-    <string name="dialog_main_end_date_title">Ends Period</string>
+    <string name="dialog_main_end_date_title">Please select the end date of your period.</string>
     <string name="dialog_main_start_date">START DATE</string>
     <string name="dialog_main_start_date_title">Add Period</string>
     <string name="dialog_mood_edit">Edit Mood</string>
@@ -149,10 +149,10 @@
     <string name="main_cycle_des">Analyze your menstrual cycle day by day</string>
     <string name="main_late">Late</string>
     <string name="main_mestruazioni">Period</string>
-    <string name="main_mestruazioni_fine">Period ends</string>
+    <string name="main_mestruazioni_fine">Period just ended ?</string>
     <string name="main_mestruazioni_inizio">Period just started</string>
     <string name="main_mestruazioni_nextp">Left</string>
-    <string name="main_mestruazioni_tap">Click Here!</string>
+    <string name="main_mestruazioni_tap">Click Here !</string>
     <string name="main_next_fertile">Next Fertile Date:</string>
     <string name="main_next_mestruazioni">Next Period:</string>
     <string name="menu_add_note">Add Note</string>
@@ -501,10 +501,10 @@
     <string name="wed">Wed</string>
 
 
-    <string name="admob_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
-    <string name="banner_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="admob_app_id" translatable="false">ca-app-pub-6418387752038401~5196724425</string>
+    <string name="banner_ad_unit_id" translatable="false">ca-app-pub-6418387752038401/8618747075</string>
     <string name="nativeid" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
-    <string name="inderstrial" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="inderstrial" translatable="false">ca-app-pub-6418387752038401/7931802625</string>
     <string name="ad_attribution" translatable="false">Ad</string>
 
     <string name="title_activity_add_reminder" translatable="false">Add Reminder</string>
@@ -521,5 +521,5 @@
     <string name="action_discard_reminder" translatable="false">Discard Reminder</string>
     <string name="action_save_reminder" translatable="false">Save Reminder</string>
     <string name="policy_info">"App Policy and Terms "</string>
-    <string name="id_open_ads" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="id_open_ads" translatable="false">ca-app-pub-6418387752038401/9053312601</string>
 </resources>

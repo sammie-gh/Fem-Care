@@ -58,7 +58,7 @@ public class EvaSchedulingService extends IntentService {
             contentIntent = PendingIntent.getActivity(this, 0, new Intent(this, MainActivity.class), 0);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            String NOTIFICATION_CHANNEL_ID = "com.androworld.evaperiodtracker";
+            String NOTIFICATION_CHANNEL_ID = " com.sammiegh.femcarer";
             String channelName = "My Remainder Service";
             NotificationChannel chan = new NotificationChannel(NOTIFICATION_CHANNEL_ID, channelName, NotificationManager.IMPORTANCE_NONE);
             chan.setLightColor(Color.BLUE);

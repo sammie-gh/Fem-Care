@@ -284,9 +284,7 @@
             android:label="@string/app_name_toolbar"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeNote">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.sammiegh.femcare.activity.MainActivity" />
+
         </activity>
         <activity
             android:name="com.sammiegh.femcare.activity.ChartsActivity"

@@ -12,6 +12,7 @@ import com.sammiegh.femcare.R;
 import com.sammiegh.femcare.model.Note;
 import com.sammiegh.femcare.model.Settings;
 import com.sammiegh.femcare.utils.JCGSQLiteHelper;
+import com.sammiegh.femcare.utils.Utils;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -156,6 +157,8 @@ public class LogActivity extends AppCompatActivity {
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(getString(R.string.note_title));
+
+        Utils.loadAd(this);
 
         txtNextP1 = (TextView) findViewById(R.id.txtNextP1);
         txtNextP2 = (TextView) findViewById(R.id.txtNextP2);
@@ -479,6 +482,19 @@ public class LogActivity extends AppCompatActivity {
         diastolic = selectedNote.getDiastolic();
         pressure = selectedNote.getPressure();
         testgravidanza = selectedNote.getTestgravidanza();
+    }
+
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
+    }
+
+    @Override
+    public void onBackPressed() {
+        Utils.displayInterstitial(this);
+        super.onBackPressed();
     }
 
     public static String fillString(int count, char c) {
